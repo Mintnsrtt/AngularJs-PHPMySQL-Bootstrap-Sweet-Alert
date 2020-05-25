@@ -9,8 +9,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
+      <div class="container" style="width: 500px;">
+          <h3 align="center">Insert Data - AngularJS</h3>
+          <div ng-app="myApp" ng-controller="usercontroller">
+            <label>FristName:</label>
+              <input type="text" name="fname" ng-model="fname" class="form-control">
+            <label>LastName:</label>
+              <input type="text" name="lname" ng-model="lname" class="form-control">
+            <br>
+             <input type="submit" name="btnInsert" ng-click="insertData()" class="btn btn-info" value="Insert">
+          </div>
+      </div>
       
   </body>
+  <script src="app.js"></script>
   <script src="dist/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 </html>
