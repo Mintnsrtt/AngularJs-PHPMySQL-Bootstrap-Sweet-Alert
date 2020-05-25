@@ -4,7 +4,7 @@ app.controller("usercontroller",function($scope,$http){
         $http.post("insert.php",
         {'fname':$scope.fname,'lname':$scope.lname})
         .then(function(data){
-            sweetAlert2("Data Complete","Insert Complete Form","success");
+            sweetAlert("Data Complete","Insert Complete Form","success");
             $scope.fname=null;
             $scope.lname=null;
         });
