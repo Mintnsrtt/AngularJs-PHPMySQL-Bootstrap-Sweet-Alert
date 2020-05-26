@@ -17,7 +17,7 @@
             <label>LastName:</label>
               <input type="text" name="lname" ng-model="lname" class="form-control">
             <br><input type="hidden" ng-model="id"/>
-             <input type="submit" name="btnInsert" ng-click="insertData()" class="btn btn-info" value="Insert">
+             <input type="submit" name="btnInsert" ng-click="insertData()" class="btn btn-info" value="{{btnName}}">
           <br><br>
 
           <table class="table tabel-bordered">
@@ -32,7 +32,7 @@
                 <td>{{x.id}}</td>
                 <td>{{x.fname}}</td>
                 <td>{{x.lname}}</td>
-                <td><button class="btn btn-info btn-xs" ng-click="">Update</button></td>
+                <td><button class="btn btn-info btn-xs" ng-click="updateData(x.id,x.fname,x.lname)">Update</button></td>
             </tr>
 
           </table>
