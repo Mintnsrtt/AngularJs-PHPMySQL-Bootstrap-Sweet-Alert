@@ -26,6 +26,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Update</th>
+                <th>Delete</th>
             </tr>
 
             <tr ng-repeat="x in names">
@@ -33,6 +34,7 @@
                 <td>{{x.fname}}</td>
                 <td>{{x.lname}}</td>
                 <td><button class="btn btn-info btn-xs" ng-click="updateData(x.id,x.fname,x.lname)">Update</button></td>
+                <td><button class="btn btn-danger btn-xs" ng-click="deleteData(x.id)">Delete</button></td>
             </tr>
 
           </table>

@@ -34,4 +34,21 @@ app.controller("usercontroller",function($scope,$http){
         $scope.lname=lname;
         $scope.btnName="Update";
       }
+      $scope.deleteData=function(id){
+        swal({
+            title: "Are you sure?",
+            text: "Confirm Delete Record!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+          },
+          function(){
+            $http.post('delete.php',{'id':$scope.id}).then(function(data){
+                    swal("Deleted!", "Your record has been deleted.", "success");
+                    $scope.displayData();
+            });
+          });
+      }
 });
