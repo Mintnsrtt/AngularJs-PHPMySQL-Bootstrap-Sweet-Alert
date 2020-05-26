@@ -11,13 +11,31 @@
   <body>
       <div class="container" style="width: 500px;">
           <h3 align="center">Insert Data - AngularJS</h3>
-          <div ng-app="myApp" ng-controller="usercontroller">
+          <div ng-app="myApp" ng-controller="usercontroller" ng-init="displayData()">
             <label>FristName:</label>
               <input type="text" name="fname" ng-model="fname" class="form-control">
             <label>LastName:</label>
               <input type="text" name="lname" ng-model="lname" class="form-control">
-            <br>
+            <br><input type="hidden" ng-model="id"/>
              <input type="submit" name="btnInsert" ng-click="insertData()" class="btn btn-info" value="Insert">
+          <br><br>
+
+          <table class="table tabel-bordered">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Update</th>
+            </tr>
+
+            <tr ng-repeat="x in names">
+                <td>{{x.id}}</td>
+                <td>{{x.fname}}</td>
+                <td>{{x.lname}}</td>
+                <td><button class="btn btn-info btn-xs" ng-click="">Update</button></td>
+            </tr>
+
+          </table>
           </div>
       </div>
       
