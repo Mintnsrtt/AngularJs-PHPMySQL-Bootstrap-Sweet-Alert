@@ -15,7 +15,7 @@
     "jquery-ui-timepicker-addon": "1.6.3",
     "jquery-validation": "1.19.1",
     "jquery.event.drag": "2.2.2",
-    "js-cookie": "2.2.1",
+    "js-cookie": "3.0.7",
     "popper.js": "^1.14.6",
     "sass": "^1.22.4",
     "tracekit": "0.4.5",
